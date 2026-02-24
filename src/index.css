@@ -348,6 +348,42 @@ li {
   }
 }
 
+/* Booking form */
+.booking-step-enter {
+  animation: bookingSlideIn 0.4s ease-out;
+}
+
+@keyframes bookingSlideIn {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.booking-success-glow {
+  animation: successGlow 2s ease-in-out infinite alternate;
+}
+
+@keyframes successGlow {
+  from {
+    box-shadow: 0 0 30px rgba(78, 205, 196, 0.2);
+  }
+
+  to {
+    box-shadow: 0 0 60px rgba(78, 205, 196, 0.5), 0 0 100px rgba(78, 205, 196, 0.15);
+  }
+}
+
+.booking-field-error .sc-input {
+  border-color: #ef4444 !important;
+  box-shadow: 0 0 0 2px rgba(239, 68, 68, 0.2);
+}
+
 @media (max-width: 768px) {
   .section-title {
     font-size: clamp(1.5rem, 8vw, 2.5rem);
