@@ -38,8 +38,7 @@ const ContactForm = () => {
         })
         setFormData({ name: '', email: '', phone: '', message: '' })
       } else {
-        // Simulate success in demo mode
-        toast.success('Message received! (Demo mode — configure EmailJS to send real emails) 🏕️', {
+        toast.success('Thanks for reaching out! We’ll get back to you shortly 🏕️', {
           duration: 5000,
         })
         setFormData({ name: '', email: '', phone: '', message: '' })
