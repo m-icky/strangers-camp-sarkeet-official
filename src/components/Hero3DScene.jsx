@@ -516,25 +516,25 @@ const Hero3DScene = () => {
       <div className="noise-overlay" />
 
       {/* Content */}
-      <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-4">
-        <img src={Mainlogo} alt="Mainlogo" className="mb-6" />
+      <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-4 pt-4 sm:pt-0 pb-20 sm:pb-0">
+        <img src={Mainlogo} alt="Mainlogo" className="mb-4" />
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5, duration: 0.8 }}
-          className="section-tag mb-6"
+          className="section-tag mb-4 sm:mb-6 text-xs sm:text-sm"
         >
           ⛺ sarkeet.official presents
         </motion.div>
 
-        <h1 className="font-display text-5xl sm:text-6xl lg:text-8xl font-black leading-tight mb-6">
+        <h1 className="font-display text-4xl sm:text-6xl lg:text-8xl font-black leading-tight mb-4 sm:mb-6">
           {taglineWords.map((word, i) => (
             <motion.span
               key={i}
               initial={{ opacity: 0, y: 40, filter: 'blur(10px)' }}
               animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
               transition={{ delay: 0.8 + i * 0.2, duration: 0.6, ease: 'easeOut' }}
-              className={`inline-block mr-3 drop-shadow-lg ${
+              className={`inline-block mr-2 sm:mr-3 drop-shadow-lg ${
                 i === 1 || i === 3 || i === 5 ? 'text-[#4ecdc4]' : 'text-[#f0f4ff]'
               }`}
               style={i % 2 === 1 ? { textShadow: '0 0 30px rgba(78,205,196,0.5)' } : { textShadow: '0 2px 20px rgba(0,0,0,0.7)' }}
@@ -548,7 +548,7 @@ const Hero3DScene = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 2.2, duration: 1 }}
-          className="font-accent italic text-[#c0d8f8] text-lg sm:text-xl max-w-xl mb-10"
+          className="font-accent italic text-[#c0d8f8] text-base sm:text-xl max-w-xl mb-6 sm:mb-10"
           style={{ textShadow: '0 2px 16px rgba(0,0,0,0.7)' }}
         >
           Where every stranger is a story waiting to be told.
@@ -558,7 +558,7 @@ const Hero3DScene = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 2.6, duration: 0.8 }}
-          className="flex flex-col sm:flex-row gap-4"
+          className="flex flex-col sm:flex-row gap-3 sm:gap-4"
         >
           <button
             className="btn-teal text-base"
@@ -579,7 +579,7 @@ const Hero3DScene = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 3, duration: 1 }}
-          className="absolute bottom-16 left-1/2 -translate-x-1/2 flex gap-8 sm:gap-16"
+          className="absolute bottom-6 sm:bottom-16 w-full px-4 left-1/2 -translate-x-1/2 flex justify-center gap-4 sm:gap-16"
         >
           {[
             { num: '500+', label: 'Strangers Met' },
@@ -593,7 +593,7 @@ const Hero3DScene = () => {
               >
                 {stat.num}
               </div>
-              <div className="font-body text-xs text-[#8ab0d0] tracking-widest mt-1">{stat.label}</div>
+              <div className="font-body text-[10px] sm:text-xs text-[#8ab0d0] tracking-wider mt-1">{stat.label}</div>
             </div>
           ))}
         </motion.div>
@@ -604,7 +604,7 @@ const Hero3DScene = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 3.5, duration: 1 }}
-        className="absolute bottom-6 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
+        className="hidden sm:flex absolute bottom-6 left-1/2 -translate-x-1/2 flex-col items-center gap-2"
       >
         {/* <span className="font-body text-xs text-[#4ecdc4]/80 tracking-[0.3em]">SCROLL</span> */}
         <motion.div
